@@ -1,0 +1,23 @@
+body{
+	background-color:white;
+	background-image: url("https://iso.500px.com/wp-content/uploads/2016/04/stock-photo-150595123.jpg");
+}
+
+.ali{
+
+	background-color:red;
+}
+#hhh{
+	height: 500px;
+}
+.component {
+	color:black;
+	border-style: groove;
+    margin-bottom: 5px;
+
+}
+
+.publish{
+	color:red;
+
+}
