@@ -2,9 +2,9 @@
   "name": "application",
   "version": "1.0.0",
   "scripts": {
-    "client": "cd client && yarn start",
-    "server": "nodemon server.js",
+    "start":"nodemon server.js && cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+
   },
   "dependencies": {
     "body-parser": "^1.18.3",
