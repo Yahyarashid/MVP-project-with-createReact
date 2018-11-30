@@ -2,8 +2,8 @@
   "name": "application",
   "version": "1.0.0",
   "scripts": {
-    "client": "cd client && yarn start",
     "server": "nodemon server.js",
+    "client": "cd client && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
     "start":"node server.js",
     "heroku-postbuild": "cd client && npm install && npm run dev"
