@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // UNCOMMENT FOR REACT
- app.use(express.static(__dirname + '/client/public'));
+ //app.use(express.static(__dirname + '/client/public'));
 
 // UNCOMMENT FOR ANGULAR
 // app.use(express.static(__dirname + '/../angular-client'));
@@ -57,7 +57,14 @@ app.post('/delete',function(req,res){
 // })
 
 
-
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, 'client/build')));
+  // Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  });
+}
 
 ////////////////////////////////////////////////////////////////////////
 
