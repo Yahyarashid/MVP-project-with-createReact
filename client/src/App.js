@@ -24,11 +24,11 @@ class App extends React.Component {
       success: function(){
         $.ajax({
           type: 'GET',
-          url: '/h', 
+          url: '/', 
           success: (data) => {
                  $.ajax({
           type: 'GET',
-          url: '/h', 
+          url: '/', 
           success: (data) => {
             context.setState({
               items: data
@@ -54,12 +54,12 @@ class App extends React.Component {
      let context = this;
     $.ajax({
       type:'POST',
-      url:'/h',
+      url:'/',
       data:{message:term},
       success: function(){
         $.ajax({
           type: 'GET',
-          url: '/h', 
+          url: '/', 
           success: (data) => {
             context.setState({
               items: data
@@ -77,7 +77,7 @@ class App extends React.Component {
   componentDidMount() {
     $.ajax({
       type: 'GET',
-      url: '/h', 
+      url: '/', 
       success: (data) => {
         this.setState({
           items: data
