@@ -8,13 +8,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // UNCOMMENT FOR REACT
- app.use(express.static(__dirname + '/client/dist'));
+ app.use(express.static(__dirname + '/client'));
 
 // UNCOMMENT FOR ANGULAR
 // app.use(express.static(__dirname + '/../angular-client'));
 // app.use(express.static(__dirname + '/../node_modules'));
 
-app.get('/', function (req, res) {
+app.get('/h', function (req, res) {
 	console.log('i get message')
 
 	items.selectAll(function(err,items){
