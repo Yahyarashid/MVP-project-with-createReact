@@ -38,7 +38,7 @@ app.get('*',(req, res) => {
 });
 
 
-app.post('/', function(req,res) {
+app.post('/h', function(req,res) {
 
 	items.saveData(req.body);
 	res.send('world is amazing');
