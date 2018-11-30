@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 // app.use(express.static(__dirname + '/../angular-client'));
 // app.use(express.static(__dirname + '/../node_modules'));
 
-app.get('/', function (req, res) {
+app.get('/h', function (req, res) {
 	items.selectAll(function(err,items){
 		res.send(items)
 
@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.post('/', function(req,res) {
+app.post('/h', function(req,res) {
 
 	items.saveData(req.body);
 	res.send('world is amazing');
