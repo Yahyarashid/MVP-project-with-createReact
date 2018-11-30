@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 // UNCOMMENT FOR REACT
- app.use(express.static(__dirname + '/client/public'));
+ app.use(express.static(__dirname + '/client/dist'));
 
 // UNCOMMENT FOR ANGULAR
 // app.use(express.static(__dirname + '/../angular-client'));
