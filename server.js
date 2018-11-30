@@ -5,7 +5,7 @@ var path = require('path')
 // var items = require('../database-mysql');
 var items = require('./database-mongo');
 var app = express();
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 // UNCOMMENT FOR REACT
