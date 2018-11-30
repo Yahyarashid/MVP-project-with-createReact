@@ -15,8 +15,6 @@ app.use(bodyParser.json())
 // app.use(express.static(__dirname + '/../node_modules'));
 
 app.get('/', function (req, res) {
-	console.log('i get message')
-
 	items.selectAll(function(err,items){
 		res.send(items)
 
